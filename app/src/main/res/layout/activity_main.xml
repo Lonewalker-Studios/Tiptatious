@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--- Views on the left side -->
+    <TextView
+        android:id="@+id/baseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="monospace"
+        android:text="Tip Base"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/baseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/baseLabel"
+        tools:text="24%" />
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="Tip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/totalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalLabel" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
+        android:text="Total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/tipPercentage"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentage" />
+    <!-- Views on the right side -->
+    <EditText
+        android:id="@+id/baseEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:hint="Bill amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/baseLabel"
+        app:layout_constraintTop_toTopOf="@id/baseLabel"
+        app:layout_constraintBottom_toBottomOf="@id/baseLabel"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <SeekBar
+        android:id="@+id/tipPercentageBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:max="30"
+        app:layout_constraintStart_toStartOf="@+id/baseEdit"
+        app:layout_constraintTop_toBottomOf="@+id/baseEdit" />
+
+    <TextView
+        android:id="@+id/tipTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@+id/tipPercentageBar"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentageBar"
+        tools:text="103.11" />
+
+    <TextView
+        android:id="@+id/tipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@+id/tipTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tipTotal"
+        tools:text="19.6" />
+
+    <TextView
+        android:id="@+id/legalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="416dp"
+        android:fontFamily="@font/jetbrains_mono_thin"
+        android:text="Copyright (C) Lonewalker Studios. All rights reserved."
+        app:flow_wrapMode="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipText" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="@font/jetbrains_mono_thin"
+        android:text="v1.0"
+        android:textSize="90sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
