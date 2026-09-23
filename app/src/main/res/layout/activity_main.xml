@@ -59,13 +59,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:ems="8"
+        android:fontFamily="@font/jetbrains_mono_thin"
         android:hint="Bill amount"
         android:inputType="numberDecimal"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/baseLabel"
-        app:layout_constraintTop_toTopOf="@id/baseLabel"
         app:layout_constraintBottom_toBottomOf="@id/baseLabel"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_constraintStart_toEndOf="@+id/baseLabel"
+        app:layout_constraintTop_toTopOf="@id/baseLabel" />
 
     <SeekBar
         android:id="@+id/tipPercentageBar"
@@ -81,6 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:fontFamily="@font/jetbrains_mono_thin"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="@+id/tipPercentageBar"
         app:layout_constraintTop_toBottomOf="@+id/tipPercentageBar"
@@ -91,6 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
+        android:fontFamily="@font/jetbrains_mono_thin"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="@+id/tipTotal"
         app:layout_constraintTop_toBottomOf="@+id/tipTotal"
@@ -109,13 +111,13 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="144dp"
+        android:layout_width="188dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="344dp"
         android:fontFamily="@font/jetbrains_mono_thin"
-        android:text="v1.0.1"
-        android:textSize="90sp"
+        android:text="v1.0.2"
+        android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipText" />
 
